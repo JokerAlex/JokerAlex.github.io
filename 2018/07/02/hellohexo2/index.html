@@ -94,7 +94,7 @@
 <meta property="og:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/hellohexo2.1.png">
-<meta property="og:updated_time" content="2018-07-02T14:32:07.843Z">
+<meta property="og:updated_time" content="2018-07-02T14:44:56.048Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Hexo（二）主题与界面优化">
 <meta name="twitter:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
@@ -313,7 +313,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2018-07-02T22:32:07+08:00" content="2018-07-02">
+              <time itemprop="dateUpdated" datetime="2018-07-02T22:44:56+08:00" content="2018-07-02">
                 2018-07-02
               </time>
             </span>
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,491 字
+                  1,545 字
                 </span>
               
 
@@ -510,34 +510,49 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
 <h3 id="修改文章底部带-号的标签"><a href="#修改文章底部带-号的标签" class="headerlink" title="修改文章底部带#号的标签"></a>修改文章底部带#号的标签</h3><ul>
-<li>修改模板/themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将其换成 \<i class="fa fa-tag">\</i></li>
+<li>修改模板/themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将其换成 </li>
 </ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-tag"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="在网站底部加上访客数"><a href="#在网站底部加上访客数" class="headerlink" title="在网站底部加上访客数"></a>在网站底部加上访客数</h3><ul>
 <li>打开 /themes/next/layout/_partials/footer.swig 文件,在 copyright 前加上：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">- 然后在合适的位置添加显示统计的代码</span><br></pre></td></tr></table></figure>
-<div class="powered-by"><br><i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv"><br>  本站访客数:<span id="busuanzi_value_site_uv"></span><br></span><br></div>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 统计方式：pv的方式，单个用户连续点击n篇文章，记录n次访问量</span><br></pre></td></tr></table></figure>
-<p><span id="busuanzi_container_site_pv"><br>    本站总访问量<span id="busuanzi_value_site_pv"></span>次<br></span></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 统计方式：uv的方式，单个用户连续点击n篇文章，只记录1次访客数</span><br></pre></td></tr></table></figure>
-<p><span id="busuanzi_container_site_uv"><br>  本站总访问量<span id="busuanzi_value_site_uv"></span>次<br></span></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 添加标签页面</span><br><span class="line">- 执行如下代码，会自动在根目录 source 文件夹下生成 tags 文件夹</span><br></pre></td></tr></table></figure>
-<p>hexo new page tags<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 如果有集成评论服务，页面也会带有评论。 若需要关闭的话，在 /tags/index.md 文件里添加字段 comments 并将值设置为 false，如：</span><br></pre></td></tr></table></figure></p>
-<p>title: 标签<br>date:<br>type: “tags”</p>
-<h2 id="comments-false"><a href="#comments-false" class="headerlink" title="comments: false"></a>comments: false</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。 底下代码是一篇包含标签的文章的例子：</span><br></pre></td></tr></table></figure>
-<p>title: 标签测试文章<br>tags:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>Testing</li>
-<li>Another Tag</li>
+<li>然后在合适的位置加上显示统计量的代码</li>
 </ul>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 添加分类页面 </span><br><span class="line">- 执行如下代码，会自动在根目录 source 文件夹下生成 categories 文件夹</span><br></pre></td></tr></table></figure>
-<p>hexo new page categories<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 果有集成评论服务，页面也会带有评论。 若需要关闭的话，在 /categories/index.md 里添加字段 comments 并将值设置为 false，如：</span><br></pre></td></tr></table></figure></p>
-<p>title: 分类<br>date:<br>type: “categories”</p>
-<h2 id="comments-false-1"><a href="#comments-false-1" class="headerlink" title="comments: false"></a>comments: false</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。 底下代码是一篇包含分类的文章的例子：</span><br></pre></td></tr></table></figure>
-<p>title: 分类测试文章</p>
-<h2 id="categories-Testing"><a href="#categories-Testing" class="headerlink" title="categories: Testing"></a>categories: Testing</h2><p><code>`</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"powered-by"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-user-md"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line">  本站访客数:<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>统计方式：pv的方式，单个用户连续点击n篇文章，记录n次访问量</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line">    本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>统计方式：uv的方式，单个用户连续点击n篇文章，只记录1次访客数</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line">  本站总访问量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="添加标签页面"><a href="#添加标签页面" class="headerlink" title="添加标签页面"></a>添加标签页面</h3><ul>
+<li>执行如下代码，会自动在根目录 source 文件夹下生成 tags 文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果有集成评论服务，页面也会带有评论。 若需要关闭的话，在 /tags/index.md 文件里添加字段 comments 并将值设置为 false，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: </span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。 底下代码是一篇包含标签的文章的例子：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 标签测试文章</span><br><span class="line">tags:</span><br><span class="line">  - Testing</span><br><span class="line">  - Another Tag</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="添加分类页面"><a href="#添加分类页面" class="headerlink" title="添加分类页面"></a>添加分类页面</h3><ul>
+<li>执行如下代码，会自动在根目录 source 文件夹下生成 categories 文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<ul>
+<li>果有集成评论服务，页面也会带有评论。 若需要关闭的话，在 /categories/index.md 里添加字段 comments 并将值设置为 false，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: </span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。 底下代码是一篇包含分类的文章的例子：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 分类测试文章</span><br><span class="line">categories: Testing</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
 <li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next官方文档</a></li>
 <li><a href="https://blog.csdn.net/ganzhilin520/article/details/79053399" target="_blank" rel="noopener">hexo添加文章更新时间</a></li>
@@ -734,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最终效果图大致如下"><span class="nav-number">1.</span> <span class="nav-text">最终效果图大致如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始变更"><span class="nav-number">2.</span> <span class="nav-text">开始变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更换-next-主题"><span class="nav-number">2.0.1.</span> <span class="nav-text">更换 next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主页文章局部显示，添加阅读全文按钮"><span class="nav-number">2.0.2.</span> <span class="nav-text">设置主页文章局部显示，添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文章更新时间"><span class="nav-number">2.0.3.</span> <span class="nav-text">添加文章更新时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加字数统计"><span class="nav-number">2.0.4.</span> <span class="nav-text">给文章添加字数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">2.0.5.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章底部带-号的标签"><span class="nav-number">2.0.6.</span> <span class="nav-text">修改文章底部带#号的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网站底部加上访客数"><span class="nav-number">2.0.7.</span> <span class="nav-text">在网站底部加上访客数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#comments-false"><span class="nav-number">2.1.</span> <span class="nav-text">comments: false</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#comments-false-1"><span class="nav-number">2.2.</span> <span class="nav-text">comments: false</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#categories-Testing"><span class="nav-number">2.3.</span> <span class="nav-text">categories: Testing</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最终效果图大致如下"><span class="nav-number">1.</span> <span class="nav-text">最终效果图大致如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始变更"><span class="nav-number">2.</span> <span class="nav-text">开始变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更换-next-主题"><span class="nav-number">2.0.1.</span> <span class="nav-text">更换 next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主页文章局部显示，添加阅读全文按钮"><span class="nav-number">2.0.2.</span> <span class="nav-text">设置主页文章局部显示，添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文章更新时间"><span class="nav-number">2.0.3.</span> <span class="nav-text">添加文章更新时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加字数统计"><span class="nav-number">2.0.4.</span> <span class="nav-text">给文章添加字数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">2.0.5.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章底部带-号的标签"><span class="nav-number">2.0.6.</span> <span class="nav-text">修改文章底部带#号的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网站底部加上访客数"><span class="nav-number">2.0.7.</span> <span class="nav-text">在网站底部加上访客数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.0.8.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.0.9.</span> <span class="nav-text">添加分类页面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -769,7 +784,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.4k</span>
+    <span title="Site words total count">2.5k</span>
   
 </div>
 
