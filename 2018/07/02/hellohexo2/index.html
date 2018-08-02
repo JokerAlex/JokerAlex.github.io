@@ -94,7 +94,7 @@
 <meta property="og:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/hellohexo2.1.png">
-<meta property="og:updated_time" content="2018-08-02T13:16:59.899Z">
+<meta property="og:updated_time" content="2018-08-02T13:35:34.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Hexo（二）主题与界面优化">
 <meta name="twitter:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
@@ -313,7 +313,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2018-08-02T21:16:59+08:00" content="2018-08-02">
+              <time itemprop="dateUpdated" datetime="2018-08-02T21:35:34+08:00" content="2018-08-02">
                 2018-08-02
               </time>
             </span>
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,545 字
+                  1,521 字
                 </span>
               
 
@@ -487,33 +487,16 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
 <h3 id="添加文章更新时间"><a href="#添加文章更新时间" class="headerlink" title="添加文章更新时间"></a>添加文章更新时间</h3><ul>
-<li>修改/themes/next/layout/_macro/post.swig 文件，在<span class="post-time">…</span>标签后添加</li>
+<li>修改/themes/next/layout/_macro/post.swig 文件，找到如下标签</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;%if post.updated and post.updated &gt; post.date%&#125;</span><br><span class="line">  &lt;span class=&quot;post-updated&quot;&gt;</span><br><span class="line">    &amp;nbsp; | &amp;nbsp; &#123;&#123; __(&apos;post.updated&apos;) &#125;&#125;</span><br><span class="line">    &lt;time itemprop=&quot;dateUpdated&quot; datetime=&quot;&#123;&#123; moment(post.updated).format() &#125;&#125;&quot; content=&quot;&#123;&#123; date(post.updated, config.date_format) &#125;&#125;&quot;&gt;</span><br><span class="line">      &#123;&#123; date(post.updated, config.date_format) &#125;&#125;</span><br><span class="line">    &lt;/time&gt;</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>根据博客配置文件中的 language 参数修改对应的语言配置文件（博客主目录）/themes/next/languages/zh_Hans.yml，如果有重复翻译，将其注释掉，修改为如下所示</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">post:</span><br><span class="line">  updated: 更新于</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修改主题配置文件 /themes/next/_config.yml，增加一行</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display_updated: true</span><br></pre></td></tr></table></figure>
-<ul>
-<li>写文章的时候可以直接在文章开头设置更新时间，没有这参数的话将会显示md文件的修改日期</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">updated: 2018-01-01 12:00:00</span><br></pre></td></tr></table></figure>
-<h3 id="给文章添加字数统计"><a href="#给文章添加字数统计" class="headerlink" title="给文章添加字数统计"></a>给文章添加字数统计</h3><ul>
-<li>在博客根目录下安装 hexo-wordcount</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-<ul>
-<li>打开主题的配置文件，/themes/next/_config.yml，找到 post-wordcount 修改为如下所示</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true #单篇字数统计</span><br><span class="line">  min2read: true #单篇阅读时长</span><br><span class="line">  totalcount: true #网站字数统计</span><br><span class="line">  separated_meta: true</span><br></pre></td></tr></table></figure>
-<ul>
-<li>显示“字”、“分钟”，打开文件 /themes/next/layout/_macro/post.swig 找到字数统计和阅读时长</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#字数统计</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; __('post.wordcount') &#125;&#125;"</span>&gt;</span></span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">#修改为</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; __('post.wordcount') &#125;&#125;"</span>&gt;</span></span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125; 字</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">#同理，阅读时长，修改后如下</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">title</span>=<span class="string">"&#123;&#123; __('post.min2read') &#125;&#125;"</span>&gt;</span></span><br><span class="line">    &#123;&#123; min2read(post.content) &#125;&#125; 分钟</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">``` </span><br><span class="line">- 在标签后添加如下内容</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 根据博客配置文件中的 language 参数修改对应的语言配置文件（博客主目录）/themes/next/languages/zh_Hans.yml，如果有重复翻译，将其注释掉，修改为如下所示</span><br></pre></td></tr></table></figure>
+<p>post:<br>  updated: 更新于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 修改主题配置文件 /themes/next/_config.yml，增加一行</span><br></pre></td></tr></table></figure></p>
+<p>display_updated: true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 写文章的时候可以直接在文章开头设置更新时间，没有这参数的话将会显示md文件的修改日期</span><br></pre></td></tr></table></figure></p>
+<p>updated: 2018-01-01 12:00:00<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 给文章添加字数统计</span><br><span class="line">- 在博客根目录下安装 hexo-wordcount</span><br></pre></td></tr></table></figure></p>
+<p>npm install hexo-wordcount –save<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 打开主题的配置文件，/themes/next/_config.yml，找到 post-wordcount 修改为如下所示</span><br></pre></td></tr></table></figure></p>
+<p>post_wordcount:<br>  item_text: true<br>  wordcount: true #单篇字数统计<br>  min2read: true #单篇阅读时长<br>  totalcount: true #网站字数统计<br>  separated_meta: true<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 显示“字”、“分钟”，打开文件 /themes/next/layout/_macro/post.swig 找到字数统计和阅读时长</span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">#字数统计</span><br><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">#修改为</span><br><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.wordcount&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; wordcount(post.content) &#125;&#125; 字</span><br><span class="line">&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">#同理，阅读时长，修改后如下</span><br><span class="line">&lt;span title=&quot;&#123;&#123; __(&apos;post.min2read&apos;) &#125;&#125;&quot;&gt;</span><br><span class="line">    &#123;&#123; min2read(post.content) &#125;&#125; 分钟</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
 <h3 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h3><ul>
 <li>打开主题的配置文件，/themes/next/_config.yml，找到 # Progress bar in the top during page loading 将 pace 改为 true 即可，还可以设置不同样式的加载条</li>
 </ul>
@@ -769,7 +752,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最终效果图大致如下"><span class="nav-number">1.</span> <span class="nav-text">最终效果图大致如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始变更"><span class="nav-number">2.</span> <span class="nav-text">开始变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更换-next-主题"><span class="nav-number">2.0.1.</span> <span class="nav-text">更换 next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主页文章局部显示，添加阅读全文按钮"><span class="nav-number">2.0.2.</span> <span class="nav-text">设置主页文章局部显示，添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文章更新时间"><span class="nav-number">2.0.3.</span> <span class="nav-text">添加文章更新时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加字数统计"><span class="nav-number">2.0.4.</span> <span class="nav-text">给文章添加字数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">2.0.5.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章底部带-号的标签"><span class="nav-number">2.0.6.</span> <span class="nav-text">修改文章底部带#号的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网站底部加上访客数"><span class="nav-number">2.0.7.</span> <span class="nav-text">在网站底部加上访客数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.0.8.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.0.9.</span> <span class="nav-text">添加分类页面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最终效果图大致如下"><span class="nav-number">1.</span> <span class="nav-text">最终效果图大致如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始变更"><span class="nav-number">2.</span> <span class="nav-text">开始变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更换-next-主题"><span class="nav-number">2.0.1.</span> <span class="nav-text">更换 next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主页文章局部显示，添加阅读全文按钮"><span class="nav-number">2.0.2.</span> <span class="nav-text">设置主页文章局部显示，添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文章更新时间"><span class="nav-number">2.0.3.</span> <span class="nav-text">添加文章更新时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">2.0.4.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章底部带-号的标签"><span class="nav-number">2.0.5.</span> <span class="nav-text">修改文章底部带#号的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网站底部加上访客数"><span class="nav-number">2.0.6.</span> <span class="nav-text">在网站底部加上访客数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.0.7.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.0.8.</span> <span class="nav-text">添加分类页面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -804,7 +787,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.3k</span>
+    <span title="Site words total count">3.2k</span>
   
 </div>
 
