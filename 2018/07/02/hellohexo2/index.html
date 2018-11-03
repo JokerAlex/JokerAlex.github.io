@@ -94,7 +94,7 @@
 <meta property="og:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/hellohexo2.1.png">
-<meta property="og:updated_time" content="2018-11-03T06:23:51.264Z">
+<meta property="og:updated_time" content="2018-11-03T06:47:13.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Hexo（二）主题与界面优化">
 <meta name="twitter:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
@@ -313,7 +313,7 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2018-11-03T14:23:51+08:00" content="2018-11-03">
+              <time itemprop="dateUpdated" datetime="2018-11-03T14:47:13+08:00" content="2018-11-03">
                 2018-11-03
               </time>
             </span>
@@ -358,12 +358,18 @@
 
           
           
-
+             <span id="/2018/07/02/hellohexo2/" class="leancloud_visitors" data-flag-title="Hello Hexo（二）主题与界面优化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
-            </span>
+
           
 
           
@@ -377,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,767 字
+                  1,803 字
                 </span>
               
 
@@ -520,7 +526,9 @@
 <li>修改模板/themes/next/layout/_macro/post.swig，搜索 rel=”tag”&gt;#，将其换成 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-tag"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="在网站底部加上访客数"><a href="#在网站底部加上访客数" class="headerlink" title="在网站底部加上访客数"></a>在网站底部加上访客数</h3><ul>
+<h3 id="在网站底部加上访客数"><a href="#在网站底部加上访客数" class="headerlink" title="在网站底部加上访客数"></a><del>在网站底部加上访客数</del></h3><p>新版本 Next 主题配置文件已有相关配置</p>
+<p>打开主题的配置文件，/themes/next/_config.yml 文件查找 busuanzi_count 即可</p>
+<ul>
 <li>打开 /themes/next/layout/_partials/footer.swig 文件,在 copyright 前加上：</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -700,7 +708,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -711,7 +719,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -722,7 +730,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -805,7 +813,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.6k</span>
+    <span title="Site words total count">5.6k</span>
   
 </div>
 
@@ -826,20 +834,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      本站总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      次
-    </span>
-  
-
-  
-</div>
-
 
 
 
@@ -1035,6 +1029,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("QtTKAevd2NymebfNvXkTi2iT-gzGzoHsz", "voiWp6j1iPJsaeurdrnYPkAL");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

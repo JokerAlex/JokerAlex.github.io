@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="CentOS,MySQl," />
 
 
 
@@ -85,23 +85,20 @@
 
 
 
-<meta name="description" content="HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页  安装安装前提 mac 安装 homebrew   打开终端输入一下命令   1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="CentOS7 服务器环境安装-MySQLMySQL使用 yum 来安装 1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装本次使用的源为 mysql80-community-release-el7-1.noarch.rpm 1yum localinstall mysql80-community-release-el7-1.noarch.rpm 安装成功后，可以看到/">
+<meta name="keywords" content="CentOS,MySQl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello Hexo（一）安装与部署">
-<meta property="og:url" content="https://jokeralex.github.io/2018/07/02/hellohexo1/index.html">
+<meta property="og:title" content="CentOS7 服务器环境配置-MySQL">
+<meta property="og:url" content="https://jokeralex.github.io/2018/11/03/Centos7Server-MySql/index.html">
 <meta property="og:site_name" content="Alex&#39;s blogs">
-<meta property="og:description" content="HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页  安装安装前提 mac 安装 homebrew   打开终端输入一下命令   1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
+<meta property="og:description" content="CentOS7 服务器环境安装-MySQLMySQL使用 yum 来安装 1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装本次使用的源为 mysql80-community-release-el7-1.noarch.rpm 1yum localinstall mysql80-community-release-el7-1.noarch.rpm 安装成功后，可以看到/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/hexo%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%9B%BE%E7%89%87.png">
-<meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/github%E5%BB%BA%E5%BA%93.jpg">
-<meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/github%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D.jpg">
-<meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90github.jpg">
-<meta property="og:updated_time" content="2018-07-02T14:22:49.044Z">
+<meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/centosserver1.png">
+<meta property="og:updated_time" content="2018-11-03T07:00:40.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Hexo（一）安装与部署">
-<meta name="twitter:description" content="HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页  安装安装前提 mac 安装 homebrew   打开终端输入一下命令   1/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst">
-<meta name="twitter:image" content="http://pb8b5pd81.bkt.clouddn.com/hexo%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%9B%BE%E7%89%87.png">
+<meta name="twitter:title" content="CentOS7 服务器环境配置-MySQL">
+<meta name="twitter:description" content="CentOS7 服务器环境安装-MySQLMySQL使用 yum 来安装 1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装本次使用的源为 mysql80-community-release-el7-1.noarch.rpm 1yum localinstall mysql80-community-release-el7-1.noarch.rpm 安装成功后，可以看到/">
+<meta name="twitter:image" content="http://pb8b5pd81.bkt.clouddn.com/centosserver1.png">
 
 
 
@@ -131,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://jokeralex.github.io/2018/07/02/hellohexo1/"/>
+  <link rel="canonical" href="https://jokeralex.github.io/2018/11/03/Centos7Server-MySql/"/>
 
 
 
 
 
-  <title>Hello Hexo（一）安装与部署 | Alex's blogs</title>
+  <title>CentOS7 服务器环境配置-MySQL | Alex's blogs</title>
   
 
 
@@ -274,7 +271,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jokeralex.github.io/2018/07/02/hellohexo1/">
+    <link itemprop="mainEntityOfPage" href="https://jokeralex.github.io/2018/11/03/Centos7Server-MySql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex Zhao">
@@ -291,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello Hexo（一）安装与部署</h1>
+          <h1 class="post-title" itemprop="name headline">CentOS7 服务器环境配置-MySQL</h1>
         
 
         <div class="post-meta">
@@ -303,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-02T14:37:19+08:00">
-                2018-07-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T14:54:03+08:00">
+                2018-11-03
               </time>
             
 
@@ -316,8 +313,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2018-07-02T22:22:49+08:00" content="2018-07-02">
-                2018-07-02
+              <time itemprop="dateUpdated" datetime="2018-11-03T15:00:40+08:00" content="2018-11-03">
+                2018-11-03
               </time>
             </span>
           
@@ -334,8 +331,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -352,8 +349,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/02/hellohexo1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/07/02/hellohexo1/" itemprop="commentsCount"></span>
+                <a href="/2018/11/03/Centos7Server-MySql/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/11/03/Centos7Server-MySql/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -361,7 +358,7 @@
 
           
           
-             <span id="/2018/07/02/hellohexo1/" class="leancloud_visitors" data-flag-title="Hello Hexo（一）安装与部署">
+             <span id="/2018/11/03/Centos7Server-MySql/" class="leancloud_visitors" data-flag-title="CentOS7 服务器环境配置-MySQL">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -386,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  938 字
+                  686 字
                 </span>
               
 
@@ -402,7 +399,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -423,116 +420,40 @@
       
 
       
-        <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页</p>
-<hr>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><ul>
-<li><p>mac 安装 homebrew</p>
-<p>  打开终端输入一下命令</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
+        <h1 id="CentOS7-服务器环境安装-MySQL"><a href="#CentOS7-服务器环境安装-MySQL" class="headerlink" title="CentOS7 服务器环境安装-MySQL"></a>CentOS7 服务器环境安装-MySQL</h1><h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><p>使用 yum 来安装</p>
+<h3 id="1-添加-yum-源-下载网址-挑选合适的版本下载，下载好之后执行以下下命令安装"><a href="#1-添加-yum-源-下载网址-挑选合适的版本下载，下载好之后执行以下下命令安装" class="headerlink" title="1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装"></a>1.添加 yum 源 <a href="http://repo.mysql.com/" target="_blank" rel="noopener">下载网址</a> 挑选合适的版本下载，下载好之后执行以下下命令安装</h3><p>本次使用的源为 mysql80-community-release-el7-1.noarch.rpm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall mysql80-community-release-el7-1.noarch.rpm</span><br></pre></td></tr></table></figure>
+<p>安装成功后，可以看到/etc/yum.repos.d目录多了两个文件：</p>
 <ul>
-<li><p>安装 Git</p>
-<p>  在终端输入命令</p>
-</li>
+<li>mysql-community.repo</li>
+<li>mysql-community-source.repo</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>安装 Node.js</p>
-<p>  在终端输入命令</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew link node</span><br><span class="line">brew uninstall node</span><br><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-<ul>
-<li>npm 源服务器在国外，下载 node 包速度比较慢，cnpm 使用国内镜像</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在终端输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="搭建最基本的博客"><a href="#搭建最基本的博客" class="headerlink" title="搭建最基本的博客"></a>搭建最基本的博客</h1><p>在自己想保存相关博客文件的位置建立一个文件夹，比如 Blogs，然后进入该文件，在终端逐条执行以下命令：</p>
-<ul>
-<li>初始化</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装相应的依赖包</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<ul>
-<li>生成静态页面</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<ul>
-<li>启动heox-server</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#不指定端口号，默认4000</span><br><span class="line">hexo s</span><br><span class="line">#指定端口号,假设端口号为9090</span><br><span class="line">hexo s -p 9090</span><br></pre></td></tr></table></figure>
-<ul>
-<li>打开浏览器，输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 即可查看本地预览，如下图即为配置成功</li>
-</ul>
-<p><img src="http://pb8b5pd81.bkt.clouddn.com/hexo%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%9B%BE%E7%89%87.png" alt="img"></p>
-<hr>
-<h1 id="将博客部署到GitHub-Pages"><a href="#将博客部署到GitHub-Pages" class="headerlink" title="将博客部署到GitHub Pages"></a>将博客部署到GitHub Pages</h1><p>博客部署可以采用自己的云服务器或者使用 GitHub Pages，因为 GithHub 是免费的，所以推荐使用 GitHub</p>
-<h3 id="新建-GitHub-仓库"><a href="#新建-GitHub-仓库" class="headerlink" title="新建 GitHub 仓库"></a>新建 GitHub 仓库</h3><ul>
-<li>注册一个 GitHub 账号</li>
-<li>新建一个仓库，名称为 你的github账号名称.github.io</li>
-</ul>
-<p><img src="http://pb8b5pd81.bkt.clouddn.com/github%E5%BB%BA%E5%BA%93.jpg" alt="img"></p>
-<ul>
-<li>博客访问地址为 你的github账号名称（转换为小写）.github.io</li>
-</ul>
-<h3 id="将个人域名解析到-GitHub-Pages"><a href="#将个人域名解析到-GitHub-Pages" class="headerlink" title="将个人域名解析到 GitHub Pages"></a>将个人域名解析到 GitHub Pages</h3><p>我是用的是腾讯云的域名，这样就可以通过自己的域名来访问 GitHub Pages 了，例如我的地址为 <a href="https://jokeralex.github.io">https://jokeralex.github.io</a> 现在可以通过 <a href="http://alexzh.cn" target="_blank" rel="noopener">http://alexzh.cn</a> 来访问了</p>
-<ul>
-<li>打开自己的 GithHub 仓库，打开 Settings 找到 GitHub Pages 将里面的 Custom domian 改成自己的域名，如图所示</li>
-</ul>
-<p><img src="http://pb8b5pd81.bkt.clouddn.com/github%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D.jpg" alt="img"></p>
-<ul>
-<li>给自己的域名添加解析，如图添加如下三条解析，注意最后一条解析记录类型必须为 CNAME,记录值最后还有一个点</li>
-</ul>
-<p><img src="http://pb8b5pd81.bkt.clouddn.com/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90github.jpg" alt="img"></p>
-<ul>
-<li>在 source 文件下新建文件 CNAME 不带任何后缀，在里面写自己的域名</li>
-</ul>
-<h3 id="Hexo-本地配置"><a href="#Hexo-本地配置" class="headerlink" title="Hexo 本地配置"></a>Hexo 本地配置</h3><p>进入之前建立的文件夹，例如我的是 Blogs 。打开配置文件 _config.yml ,进行如下修改（注意，冒号后必须有一个空格）</p>
-<ul>
-<li>找到 URL 部分<ul>
-<li>url 改成自己的 GitHub 仓库对应的地址</li>
-<li>其他三个选项不动</li>
-<li>如下为修改好的配置</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url:  https://jokeralex.github.io</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
-<ul>
-<li>找到 Deployment 部分<ul>
-<li>type 写 git</li>
-<li>repository 写自己的 GitHub 仓库地址</li>
-<li>branch 写 master</li>
-<li>如下为修改好的配置</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/JokerAlex/JokerAlex.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修改完成后，在终端执行以下命令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">#生成静态页面</span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">#可以现在本地看看预览</span><br><span class="line">#hexo s</span><br><span class="line"></span><br><span class="line">#部署到 GitHub Pages 上</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="Hexo-基本操作"><a href="#Hexo-基本操作" class="headerlink" title="Hexo 基本操作"></a>Hexo 基本操作</h1><h3 id="发布新的文章"><a href="#发布新的文章" class="headerlink" title="发布新的文章"></a>发布新的文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;New Fielname&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>使用该命令后，会在博客目录下的 source/_post 文件夹下生成一个 md 文件，完善该文件即完成写作</li>
-<li>完成文章后，使用如下命令部署到 GitHub Pages 上</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<h3 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h3><ul>
-<li>删除博客目录下 source/_post 文件下对应的 md 文件 然后执行如下命令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
-<li><a href="https://blog.csdn.net/qq_16775897/article/details/79098267" target="_blank" rel="noopener">基于 Hexo3 与 Github 搭建个人博客</a></li>
-<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo 官方文档</a></li>
-</ul>
+<h3 id="2-安装-MySQL"><a href="#2-安装-MySQL" class="headerlink" title="2.安装 MySQL"></a>2.安装 MySQL</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+<h3 id="3-启动服务"><a href="#3-启动服务" class="headerlink" title="3.启动服务"></a>3.启动服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 启动服务</span><br><span class="line">systemctl start mysqld.service</span><br><span class="line"></span><br><span class="line"># 查看运行状态</span><br><span class="line">systemctl status mysqld.servic</span><br><span class="line"></span><br><span class="line"># 关闭服务</span><br><span class="line">systemctl stop mysqld.service</span><br></pre></td></tr></table></figure>
+<h3 id="4-修改密码"><a href="#4-修改密码" class="headerlink" title="4.修改密码"></a>4.修改密码</h3><p>MySQL 默认创建了 root 用户的密码，这个密码打印在 MySQL 的日志文件 /var/log/mysqld.log 中，可以通过 temporary password 关键字来找出这个临时的密码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &apos;temporary password&apos; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+<p>登录之后修改密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;your new password&apos;;</span><br></pre></td></tr></table></figure>
+<p>修改密码时可以能会出现如下错误:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</span><br></pre></td></tr></table></figure>
+<p>原因：新版 MySQL 加入密码安全度检测机制，导致报错</p>
+<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><ol>
+<li>直接按照下面的配置安全策略参考链接第6步进行配置</li>
+<li>先修改安全变量值在配置安全策略</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前安全变量值</span><br><span class="line">mysql&gt; SHOW VARIABLES LIKE &apos;validate_password%&apos;;</span><br></pre></td></tr></table></figure>
+<p>命令执行结果：<br><img src="http://pb8b5pd81.bkt.clouddn.com/centosserver1.png" alt="结果"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 修改变量</span><br><span class="line">set global validate_password.policy=0;</span><br><span class="line">set global validate_password.length=4;</span><br><span class="line"></span><br><span class="line"># 退出 mysql 后，执行一下语句配置安全策略</span><br><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/danykk/article/details/80137223" target="_blank" rel="noopener">配置安全策略参考链接-step6</a></p>
+<p>配置完成后就可以设置类似 123456 这样的简单密码</p>
+<h3 id="5-卸载安装的-yum-源"><a href="#5-卸载安装的-yum-源" class="headerlink" title="5.卸载安装的 yum 源"></a>5.卸载安装的 yum 源</h3><p>因为安装了 Yum Repository，以后每次yum操作都会自动更新，需要把这个卸载掉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y remove mysql80-community-release-el7-1.noarch</span><br></pre></td></tr></table></figure>
+<h3 id="6-添加远程用户"><a href="#6-添加远程用户" class="headerlink" title="6.添加远程用户"></a>6.添加远程用户</h3><h4 id="6-1创建远程用户"><a href="#6-1创建远程用户" class="headerlink" title="6.1创建远程用户"></a>6.1创建远程用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER &apos;your username&apos;@&apos;%&apos; IDENTIFIED BY &apos;your password&apos;;</span><br></pre></td></tr></table></figure>
+<h4 id="6-2授权远程用户"><a href="#6-2授权远程用户" class="headerlink" title="6.2授权远程用户"></a>6.2授权远程用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># ALL表示授予所有权限、*.*表示所有数据库中的所有表、%表示任意IP可以远程连接）</span><br><span class="line">GRANT ALL ON *.* TO &apos;[用户名]&apos;@&apos;%&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#其他权限：</span><br><span class="line">ALTER、ALTER ROUTINE、CREATE、CREATE ROUTINE、CREATE TABLESPACE、</span><br><span class="line">CREATE TEMPORARY TABLES、CREATE USER、CREATE VIEW、DELETE、DROP、EVENT、EXECUTE、</span><br><span class="line">FILE、GRANT OPTION、INDEX、INSERT、LOCK TABLES、PROCESS、PROXY、REFERENCES、</span><br><span class="line">RELOAD、REPLICATION CLIENT、REPLICATION SLAVE、SELECT、SHOW DATABASES、SHOW VIEW、</span><br><span class="line">SHUTDOWN、SUPER、TRIGGER、UPDATE、USAGE。</span><br><span class="line"></span><br><span class="line">例如GRANT INSERT,SELECT,UPDATE ON *.* TO &apos;[用户名]&apos;@&apos;%&apos;;</span><br></pre></td></tr></table></figure>
+<h4 id="6-3远程连接"><a href="#6-3远程连接" class="headerlink" title="6.3远程连接"></a>6.3远程连接</h4><p>出现如下错误：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Navicat</span><br><span class="line">2059 - Authentication plugin &apos;caching_sha2_password&apos; cannot be loaded: dlopen(../Frameworks/caching_sha2_password.so, 2): image not found</span><br><span class="line"></span><br><span class="line"># MySQL Workbench</span><br><span class="line">Authentication plugin &apos;caching_sha2_password&apos; cannot be loaded: dlopen(/usr/local/mysql/lib/plugin/caching_sha2_password.so, 2): image not found</span><br></pre></td></tr></table></figure>
+<p>解决方案：以旧版的方式重新设置远程用户的密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;your username&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;your password&apos;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -550,7 +471,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" <i class="fa fa-tag"> Hexo</a>
+            <a href="/tags/CentOS/" <i class="fa fa-tag"> CentOS</a>
+          
+            <a href="/tags/MySQl/" <i class="fa fa-tag"> MySQl</a>
           
         </div>
       
@@ -563,14 +486,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/03/Centos7Server-Java/" rel="next" title="CentOS7 服务器环境配置-Java">
+                <i class="fa fa-chevron-left"></i> CentOS7 服务器环境配置-Java
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/02/hellohexo2/" rel="prev" title="Hello Hexo（二）主题与界面优化">
-                Hello Hexo（二）主题与界面优化 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/03/Centos7Server-Nginx/" rel="prev" title="CentOS7 服务器环境配置-Nginx">
+                CentOS7 服务器环境配置-Nginx <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -730,7 +657,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo"><span class="nav-number">1.</span> <span class="nav-text">Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.0.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建最基本的博客"><span class="nav-number">3.</span> <span class="nav-text">搭建最基本的博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将博客部署到GitHub-Pages"><span class="nav-number">4.</span> <span class="nav-text">将博客部署到GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建-GitHub-仓库"><span class="nav-number">4.0.1.</span> <span class="nav-text">新建 GitHub 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将个人域名解析到-GitHub-Pages"><span class="nav-number">4.0.2.</span> <span class="nav-text">将个人域名解析到 GitHub Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-本地配置"><span class="nav-number">4.0.3.</span> <span class="nav-text">Hexo 本地配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-基本操作"><span class="nav-number">5.</span> <span class="nav-text">Hexo 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#发布新的文章"><span class="nav-number">5.0.1.</span> <span class="nav-text">发布新的文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除文章"><span class="nav-number">5.0.2.</span> <span class="nav-text">删除文章</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">6.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS7-服务器环境安装-MySQL"><span class="nav-number">1.</span> <span class="nav-text">CentOS7 服务器环境安装-MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL"><span class="nav-number">1.1.</span> <span class="nav-text">MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-添加-yum-源-下载网址-挑选合适的版本下载，下载好之后执行以下下命令安装"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-MySQL"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.安装 MySQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-启动服务"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.启动服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-修改密码"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.修改密码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法："><span class="nav-number">1.1.4.1.</span> <span class="nav-text">解决办法：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-卸载安装的-yum-源"><span class="nav-number">1.1.5.</span> <span class="nav-text">5.卸载安装的 yum 源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-添加远程用户"><span class="nav-number">1.1.6.</span> <span class="nav-text">6.添加远程用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1创建远程用户"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">6.1创建远程用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2授权远程用户"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">6.2授权远程用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3远程连接"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">6.3远程连接</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
