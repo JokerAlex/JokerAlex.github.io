@@ -94,7 +94,7 @@
 <meta property="og:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/hellohexo2.1.png">
-<meta property="og:updated_time" content="2018-08-02T13:38:05.543Z">
+<meta property="og:updated_time" content="2018-11-03T06:23:51.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Hexo（二）主题与界面优化">
 <meta name="twitter:description" content="最终效果图大致如下 开始变更更换 next 主题 进入本地博客根目录，在终端输入如下命令，下载next主题  1git clone https://github.com/iissnan/hexo-theme-next themes/next  打开博客的配置文件 _config.yml,找到 theme，后面的值改为 next 即可。其他配置（#Site 部分）     参数 描述     tit">
@@ -313,8 +313,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2018-08-02T21:38:05+08:00" content="2018-08-02">
-                2018-08-02
+              <time itemprop="dateUpdated" datetime="2018-11-03T14:23:51+08:00" content="2018-11-03">
+                2018-11-03
               </time>
             </span>
           
@@ -358,18 +358,12 @@
 
           
           
-             <span id="/2018/07/02/hellohexo2/" class="leancloud_visitors" data-flag-title="Hello Hexo（二）主题与界面优化">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -383,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,561 字
+                  1,767 字
                 </span>
               
 
@@ -399,7 +393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -566,11 +560,15 @@
 <li>「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。 底下代码是一篇包含分类的文章的例子：</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 分类测试文章</span><br><span class="line">categories: Testing</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="修改Next-Pisces主题内容区宽度"><a href="#修改Next-Pisces主题内容区宽度" class="headerlink" title="修改Next Pisces主题内容区宽度"></a>修改Next Pisces主题内容区宽度</h3><p>修改主题配置文件 /source/css/_schemes/Picses/ _layout.tyl 在该文件末尾添加以下内容</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">// 以下为新增代码！！</span><br><span class="line">// 白色区域的最大宽度</span><br><span class="line">$white_max_width = 1200px</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span>&#123; </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">90%</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: $white_max_width;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span><span class="selector-class">.post-header</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: auto <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.main-inner</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">90%</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: $white_max_width;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content-wrap</span> &#123; <span class="attribute">width</span>: <span class="built_in">calc</span>(100% - 260px); &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header</span> &#123;</span><br><span class="line">  +tablet() &#123;</span><br><span class="line">    <span class="selector-tag">width</span>: <span class="selector-tag">auto</span> !<span class="selector-tag">important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  +<span class="selector-tag">mobile</span>() &#123;</span><br><span class="line">    <span class="attribute">width</span>: auto <span class="meta">!important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> <span class="selector-class">.main-inner</span> &#123;</span><br><span class="line">  +tablet() &#123;</span><br><span class="line">    <span class="selector-tag">width</span>: <span class="selector-tag">auto</span> !<span class="selector-tag">important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  +<span class="selector-tag">mobile</span>() &#123;</span><br><span class="line">    <span class="attribute">width</span>: auto <span class="meta">!important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-wrap</span> &#123;</span><br><span class="line">  +tablet() &#123;</span><br><span class="line">    <span class="selector-tag">width</span>: 100% !<span class="selector-tag">important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  +<span class="selector-tag">mobile</span>() &#123;</span><br><span class="line">    // 为了在手机访问时，内边距不至于太大</span><br><span class="line">    <span class="selector-tag">padding</span>: 0 !<span class="selector-tag">important</span>;</span><br><span class="line">    <span class="selector-tag">width</span>: 100% !<span class="selector-tag">important</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>修改样式后，需要 hexo clean 后再部署才会生效</p>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
 <li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next官方文档</a></li>
 <li><a href="https://blog.csdn.net/ganzhilin520/article/details/79053399" target="_blank" rel="noopener">hexo添加文章更新时间</a></li>
 <li><a href="https://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">hexo的next主题个性化教程：打造炫酷网站</a></li>
 <li><a href="https://www.jianshu.com/p/baea8c95e39b" target="_blank" rel="noopener">Hexo添加字数统计、阅读时长</a></li>
+<li><a href="https://sluggishpj.github.io/blog/2017/10/14/%E4%BF%AE%E6%94%B9NexTPisces%E4%B8%BB%E9%A2%98%E6%A0%B7%E5%BC%8F/" target="_blank" rel="noopener">修改nexT Pisces主题内容区宽度</a></li>
 </ul>
 
       
@@ -773,7 +771,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最终效果图大致如下"><span class="nav-number">1.</span> <span class="nav-text">最终效果图大致如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始变更"><span class="nav-number">2.</span> <span class="nav-text">开始变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更换-next-主题"><span class="nav-number">2.0.1.</span> <span class="nav-text">更换 next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主页文章局部显示，添加阅读全文按钮"><span class="nav-number">2.0.2.</span> <span class="nav-text">设置主页文章局部显示，添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文章更新时间"><span class="nav-number">2.0.3.</span> <span class="nav-text">添加文章更新时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加字数统计"><span class="nav-number">2.0.4.</span> <span class="nav-text">给文章添加字数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">2.0.5.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章底部带-号的标签"><span class="nav-number">2.0.6.</span> <span class="nav-text">修改文章底部带#号的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网站底部加上访客数"><span class="nav-number">2.0.7.</span> <span class="nav-text">在网站底部加上访客数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.0.8.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.0.9.</span> <span class="nav-text">添加分类页面</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最终效果图大致如下"><span class="nav-number">1.</span> <span class="nav-text">最终效果图大致如下</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始变更"><span class="nav-number">2.</span> <span class="nav-text">开始变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更换-next-主题"><span class="nav-number">2.0.1.</span> <span class="nav-text">更换 next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置主页文章局部显示，添加阅读全文按钮"><span class="nav-number">2.0.2.</span> <span class="nav-text">设置主页文章局部显示，添加阅读全文按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加文章更新时间"><span class="nav-number">2.0.3.</span> <span class="nav-text">添加文章更新时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给文章添加字数统计"><span class="nav-number">2.0.4.</span> <span class="nav-text">给文章添加字数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">2.0.5.</span> <span class="nav-text">添加顶部加载条</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改文章底部带-号的标签"><span class="nav-number">2.0.6.</span> <span class="nav-text">修改文章底部带#号的标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在网站底部加上访客数"><span class="nav-number">2.0.7.</span> <span class="nav-text">在网站底部加上访客数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加标签页面"><span class="nav-number">2.0.8.</span> <span class="nav-text">添加标签页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加分类页面"><span class="nav-number">2.0.9.</span> <span class="nav-text">添加分类页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改Next-Pisces主题内容区宽度"><span class="nav-number">2.0.10.</span> <span class="nav-text">修改Next Pisces主题内容区宽度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -793,8 +791,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -808,15 +805,10 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.4k</span>
+    <span title="Site words total count">4.6k</span>
   
 </div>
 
-<div class="powered-by">
-<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
-  本站访客数:<span id="busuanzi_value_site_uv"></span>
-</span>
-</div>
 
 <!--
 
@@ -834,6 +826,20 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      次
+    </span>
+  
+
+  
+</div>
+
 
 
 
@@ -1029,113 +1035,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("QtTKAevd2NymebfNvXkTi2iT-gzGzoHsz", "voiWp6j1iPJsaeurdrnYPkAL");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
