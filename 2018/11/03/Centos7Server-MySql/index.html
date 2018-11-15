@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="CentOS,MySQl," />
+  <meta name="keywords" content="CentOS,MySQl,Linux," />
 
 
 
@@ -86,19 +86,19 @@
 
 
 <meta name="description" content="CentOS7 服务器环境安装-MySQLMySQL使用 yum 来安装 1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装本次使用的源为 mysql80-community-release-el7-1.noarch.rpm 1yum localinstall mysql80-community-release-el7-1.noarch.rpm 安装成功后，可以看到/">
-<meta name="keywords" content="CentOS,MySQl">
+<meta name="keywords" content="CentOS,MySQl,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS7 服务器环境配置-MySQL">
 <meta property="og:url" content="https://jokeralex.github.io/2018/11/03/Centos7Server-MySql/index.html">
 <meta property="og:site_name" content="Alex&#39;s blogs">
 <meta property="og:description" content="CentOS7 服务器环境安装-MySQLMySQL使用 yum 来安装 1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装本次使用的源为 mysql80-community-release-el7-1.noarch.rpm 1yum localinstall mysql80-community-release-el7-1.noarch.rpm 安装成功后，可以看到/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://pb8b5pd81.bkt.clouddn.com/centosserver1.png">
-<meta property="og:updated_time" content="2018-11-03T07:00:40.206Z">
+<meta property="og:image" content="https://s1.ax2x.com/2018/11/15/5zP1lq.png">
+<meta property="og:updated_time" content="2018-11-15T09:17:33.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 服务器环境配置-MySQL">
 <meta name="twitter:description" content="CentOS7 服务器环境安装-MySQLMySQL使用 yum 来安装 1.添加 yum 源 下载网址 挑选合适的版本下载，下载好之后执行以下下命令安装本次使用的源为 mysql80-community-release-el7-1.noarch.rpm 1yum localinstall mysql80-community-release-el7-1.noarch.rpm 安装成功后，可以看到/">
-<meta name="twitter:image" content="http://pb8b5pd81.bkt.clouddn.com/centosserver1.png">
+<meta name="twitter:image" content="https://s1.ax2x.com/2018/11/15/5zP1lq.png">
 
 
 
@@ -313,8 +313,8 @@
           
             <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2018-11-03T15:00:40+08:00" content="2018-11-03">
-                2018-11-03
+              <time itemprop="dateUpdated" datetime="2018-11-15T17:17:33+08:00" content="2018-11-15">
+                2018-11-15
               </time>
             </span>
           
@@ -442,7 +442,8 @@
 <li>先修改安全变量值在配置安全策略</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前安全变量值</span><br><span class="line">mysql&gt; SHOW VARIABLES LIKE &apos;validate_password%&apos;;</span><br></pre></td></tr></table></figure>
-<p>命令执行结果：<br><img src="http://pb8b5pd81.bkt.clouddn.com/centosserver1.png" alt="结果"></p>
+<p>命令执行结果：</p>
+<p><img src="https://s1.ax2x.com/2018/11/15/5zP1lq.png" alt="5zP1lq.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 修改变量</span><br><span class="line">set global validate_password.policy=0;</span><br><span class="line">set global validate_password.length=4;</span><br><span class="line"></span><br><span class="line"># 退出 mysql 后，执行一下语句配置安全策略</span><br><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
 <p><a href="https://blog.csdn.net/danykk/article/details/80137223" target="_blank" rel="noopener">配置安全策略参考链接-step6</a></p>
 <p>配置完成后就可以设置类似 123456 这样的简单密码</p>
@@ -474,6 +475,8 @@
             <a href="/tags/CentOS/" <i class="fa fa-tag"> CentOS</a>
           
             <a href="/tags/MySQl/" <i class="fa fa-tag"> MySQl</a>
+          
+            <a href="/tags/Linux/" <i class="fa fa-tag"> Linux</a>
           
         </div>
       
@@ -586,7 +589,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -608,7 +611,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -691,7 +694,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">5.7k</span>
+    <span title="Site words total count">6.8k</span>
   
 </div>
 
